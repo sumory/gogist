@@ -2,6 +2,7 @@ package main
 
 import (
 	log "github.com/Sirupsen/logrus"
+	"./logrustest"
 )
 
 func init() {
@@ -10,14 +11,14 @@ func init() {
 }
 
 func main() {
-	log.WithFields(log.Fields{
-		"animal": "1",
-	}).Info("A walrus appears")
 
-	log.Error("this is error")
-	log.WithFields(log.Fields{
-		"a":"b",
-	})
+
+
+	logrustest.LogTwo()
 
 	log.Warn("warn")
+
+	logrustest.LogOne()
+
+	log.Info("the end!")
 }
